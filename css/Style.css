@@ -1,0 +1,28 @@
+td {
+	width: 25px;
+}
+
+tr {
+	height: 25px;
+}
+
+table {
+	margin: 10px;
+}
+
+table tr td{
+	border: 1px solid black;
+	text-align: center;
+}
+
+table tr td:hover{
+	background-color: yellow;
+}
+
+table.success{
+	background-color: green;
+}
+
+table.fail{
+	background-color: red;
+}
