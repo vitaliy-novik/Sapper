@@ -30,6 +30,7 @@ function initialize() {
 function addListeners(){
 	var $field = $("#sapper-field");
 
+	$('#new-game').unbind('click').bind('click', () => {
 		$field.html('');
 		$field.removeClass('success');
 		$field.removeClass('fail');
@@ -43,6 +44,7 @@ function addListeners(){
 		});
 	});
 
+	$field.unbind('click').bind("click", (e) => {
 		if (e.target !== e.currentTarget) {
         	target = $(e.target);
         	var i = target.data('i');
@@ -72,6 +74,7 @@ function addListeners(){
     	e.stopPropagation();
 	});
 
+	$field.unbind("contextmenu").bind("contextmenu", (e) => {
 		if (e.target !== e.currentTarget) {
 			e.preventDefault();
 			target = $(e.target);
